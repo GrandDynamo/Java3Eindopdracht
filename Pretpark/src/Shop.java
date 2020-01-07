@@ -1,2 +1,2 @@
-public class Shop {
+public abstract class Shop implements Identifiable{
 }
