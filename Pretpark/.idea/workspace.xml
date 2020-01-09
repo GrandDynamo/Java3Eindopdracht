@@ -22,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Tim Gels" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1W4MemhabU0yfLyAyPPbEs4HhXA" />
@@ -71,6 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578404511988</updated>
       <workItem from="1578404515064" duration="1875000" />
+      <workItem from="1578602881616" duration="91000" />
     </task>
     <servers />
   </component>
