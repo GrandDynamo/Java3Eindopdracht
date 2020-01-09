@@ -15,4 +15,8 @@ public class ParkManagement {
     public void addOrder(int orderId) {
         orderList.add(new Order(orderId));
     }
+
+    public void addAttraction(Attraction attraction){
+        attractionList.add(attraction);
+    }
 }
