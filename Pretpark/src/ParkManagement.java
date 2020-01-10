@@ -1,4 +1,8 @@
 import attraction.Attraction;
+import shops.HotdogShop;
+import shops.Shop;
+import tickets.ChildTicket;
+import tickets.Ticket;
 
 import java.util.ArrayList;
 
@@ -12,6 +16,9 @@ public class ParkManagement {
     public ParkManagement() {
         orderList = new ArrayList<>();
         attractionList = new ArrayList<>();
+
+        Shop hotdogShop = new HotdogShop();
+        System.out.println(hotdogShop.getIdentifier());
     }
 
     public void addOrder(int orderId) {

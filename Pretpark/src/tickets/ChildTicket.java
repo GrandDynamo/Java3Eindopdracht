@@ -5,7 +5,8 @@ public class ChildTicket extends Ticket {
     }
 
     @Override
-    public int getIdentifier() {
-        return 0;
+    public String getIdentifier() {
+        return "";
     }
+
 }

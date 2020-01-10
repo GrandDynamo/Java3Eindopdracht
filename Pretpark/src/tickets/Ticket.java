@@ -2,12 +2,10 @@ package tickets;
 
 import identifiers.Identifiable;
 
-public class Ticket implements Identifiable {
+public abstract class Ticket implements Identifiable {
     public Ticket() {
     }
 
     @Override
-    public int getIdentifier() {
-        return 0;
-    }
+    public abstract int getIdentifier();
 }
