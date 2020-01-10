@@ -22,7 +22,7 @@ public class ParkManagement {
     }
 
     public void addOrder(int orderId) {
-        orderList.add(new Order(orderId));
+        orderList.add(new Order());
     }
 
     public void addAttraction(Attraction attraction){
