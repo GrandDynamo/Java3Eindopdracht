@@ -1,5 +1,3 @@
-package tickets;
-
 public class ElderlyTicket extends Ticket {
     @Override
     public int getIdentifier() {
