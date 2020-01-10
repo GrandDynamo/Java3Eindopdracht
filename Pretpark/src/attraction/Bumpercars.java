@@ -6,7 +6,7 @@ public class Bumpercars extends Attraction {
     }
 
     @Override
-    public String getIdentifier() {
+    public int getIdentifier() {
         return "I am a bumpercar attraction.";
     }
 }

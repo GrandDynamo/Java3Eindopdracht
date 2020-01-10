@@ -5,7 +5,7 @@ public class UmbrellaShop extends Shop {
     }
 
     @Override
-    public int getIdentifier() {
-        return 0;
+    public String getIdentifier() {
+        return "I sell umbrella's.";
     }
 }

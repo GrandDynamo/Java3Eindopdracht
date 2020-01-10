@@ -6,7 +6,7 @@ public class HauntedHouse extends Attraction {
     }
 
     @Override
-    public String getIdentifier() {
+    public int getIdentifier() {
         return "I am a hauntedHouse attraction.";
     }
 }
