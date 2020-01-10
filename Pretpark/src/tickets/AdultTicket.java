@@ -6,7 +6,12 @@ public class AdultTicket extends Ticket {
     }
 
     @Override
-    public int getIdentifier() {
+    public String getIdentifier() {
+        return null;
+    }
+
+    @Override
+    public double getTicketPrice() {
         return 0;
     }
 }
