@@ -1,8 +1,8 @@
 package shops;
 
 public class MapShop extends Shop {
-    public MapShop() {
-
+    public MapShop(double itemPricing) {
+        super(itemPricing);
     }
 
     @Override

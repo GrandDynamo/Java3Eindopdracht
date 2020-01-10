@@ -1,7 +1,8 @@
 package shops;
 
 public class HotdogShop extends Shop{
-    public HotdogShop() {
+    public HotdogShop(double itemPricing) {
+        super(itemPricing);
     }
 
     @Override

@@ -1,7 +1,9 @@
 package shops;
 
 public class UmbrellaShop extends Shop {
-    public UmbrellaShop() {
+
+    public UmbrellaShop(double itemPricing) {
+        super(itemPricing);
     }
 
     @Override

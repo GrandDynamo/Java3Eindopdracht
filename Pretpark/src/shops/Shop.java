@@ -4,9 +4,11 @@ import identifiers.Identifiable;
 
 public abstract class Shop implements Identifiable {
 
+        private double itemPricing;
 
 
-    public Shop() {
+    public Shop(double itemPricing) {
+        this.itemPricing = itemPricing;
     }
 
     @Override
