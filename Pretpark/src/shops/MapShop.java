@@ -6,7 +6,7 @@ public class MapShop extends Shop {
     }
 
     @Override
-    public int getIdentifier() {
-        return 0;
+    public String getIdentifier() {
+        return "I sell maps.";
     }
 }
