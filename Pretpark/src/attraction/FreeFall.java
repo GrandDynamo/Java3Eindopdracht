@@ -1,4 +1,4 @@
-package attractionn;
+package attraction;
 
 public class FreeFall extends Attraction {
     public FreeFall() {

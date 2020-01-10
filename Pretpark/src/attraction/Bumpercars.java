@@ -1,4 +1,4 @@
-package attractionn;
+package attraction;
 
 public class Bumpercars extends Attraction {
     public Bumpercars() {

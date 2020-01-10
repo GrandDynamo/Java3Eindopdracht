@@ -1,4 +1,4 @@
-package attractionn;
+package attraction;
 
 public class HauntedHouse extends Attraction {
     public HauntedHouse() {

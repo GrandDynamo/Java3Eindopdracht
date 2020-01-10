@@ -1,4 +1,4 @@
-import attractionn.Attraction;
+import attraction.Attraction;
 
 import java.util.ArrayList;
 

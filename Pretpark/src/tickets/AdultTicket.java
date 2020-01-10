@@ -1,3 +1,5 @@
+package tickets;
+
 public class AdultTicket extends Ticket {
     public AdultTicket(){
 

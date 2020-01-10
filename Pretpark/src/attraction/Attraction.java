@@ -1,4 +1,4 @@
-package attractionn;
+package attraction;
 
 import identifiers.Identifiable;
 
