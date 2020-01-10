@@ -3,17 +3,24 @@ package attraction;
 import identifiers.Identifiable;
 
 public abstract class Attraction implements Identifiable {
+    private static final int MINUTES_IN_DAY = 1440;
     private int totalDayVisitors;
+    private int minutesBetweenRide;
+    private int maxPeopleInRide;
 
     @Override
-    public abstract int getIdentifier();
+    public abstract String getIdentifier();
 
-
-    public int calculateMaxVisitors(){
-        return 0;
+    public Attraction(int minutesBetweenRide, int maxPeopleInRide) {
+        this.minutesBetweenRide = minutesBetweenRide;
+        this.maxPeopleInRide = maxPeopleInRide;
     }
 
-    public abstract int getMaxVisitors();
+    public void setTotalDayVisitors(int totalDayVisitors) {
+        this.totalDayVisitors = totalDayVisitors;
+    }
 
-    public abstract void setTotalDayVisitors();
+    public int calculateMaxVisitors(int minutesBetweenRide, int maxPeopleInRide) {
+        return (MINUTES_IN_DAY / minutesBetweenRide) * maxPeopleInRide;
+    }
 }

@@ -1,27 +1,12 @@
 package attraction;
 
 public class Bumpercars extends Attraction {
-    public Bumpercars() {
+    public Bumpercars(int minutesBetweenRide, int maxPeopleInRide) {
+        super(minutesBetweenRide, maxPeopleInRide);
     }
 
     @Override
-    public int getIdentifier() {
-        return 0;
-    }
-
-    @Override
-    //TODO berkening max visitor.
-    public int calculateMaxVisitors() {
-        return 1;
-    }
-
-    @Override
-    public int getMaxVisitors() {
-        return calculateMaxVisitors();
-    }
-
-    @Override
-    public void setTotalDayVisitors() {
-
+    public String getIdentifier() {
+        return "I am a bumpercar attraction.";
     }
 }

@@ -1,21 +1,12 @@
 package attraction;
 
 public class Rollercoaster extends Attraction {
-    public Rollercoaster() {
+    public Rollercoaster(int minutesBetweenRide, int maxPeopleInRide) {
+        super(minutesBetweenRide, maxPeopleInRide);
     }
 
     @Override
-    public int getIdentifier() {
-        return 0;
-    }
-
-    @Override
-    public int getMaxVisitors() {
-        return 0;
-    }
-
-    @Override
-    public void setTotalDayVisitors() {
-
+    public String getIdentifier() {
+        return "I am a rollercoaster attraction.";
     }
 }

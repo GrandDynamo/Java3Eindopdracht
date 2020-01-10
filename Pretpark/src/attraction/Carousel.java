@@ -1,22 +1,12 @@
 package attraction;
 
 public class Carousel extends Attraction {
-    public Carousel() {
-
+    public Carousel(int minutesBetweenRide, int maxPeopleInRide) {
+        super(minutesBetweenRide, maxPeopleInRide);
     }
 
     @Override
-    public int getIdentifier() {
-        return 0;
-    }
-
-    @Override
-    public int getMaxVisitors() {
-        return 0;
-    }
-
-    @Override
-    public void setTotalDayVisitors() {
-
+    public String getIdentifier() {
+        return "I am a carousel attraction.";
     }
 }
