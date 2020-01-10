@@ -1,5 +1,8 @@
-public class HotdogShop extends Shop{
-    public HotdogShop() {
+package shops;
+
+public class MapShop extends Shop {
+    public MapShop() {
+
     }
 
     @Override

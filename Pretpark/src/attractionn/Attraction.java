@@ -1,3 +1,7 @@
+package attractionn;
+
+import identifiers.Identifiable;
+
 public abstract class Attraction implements Identifiable {
     private int totalDayVisitors;
 

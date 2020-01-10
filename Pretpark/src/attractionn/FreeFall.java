@@ -1,5 +1,7 @@
-public class Rollercoaster extends Attraction {
-    public Rollercoaster() {
+package attractionn;
+
+public class FreeFall extends Attraction {
+    public FreeFall() {
     }
 
     @Override

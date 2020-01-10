@@ -1,3 +1,5 @@
+package shops;
+
 public class BalloonShop extends Shop {
     public BalloonShop() {
     }

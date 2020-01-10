@@ -1,6 +1,7 @@
-public class Carousel extends Attraction {
-    public Carousel() {
+package attractionn;
 
+public class HauntedHouse extends Attraction {
+    public HauntedHouse() {
     }
 
     @Override
@@ -18,3 +19,4 @@ public class Carousel extends Attraction {
 
     }
 }
+ 

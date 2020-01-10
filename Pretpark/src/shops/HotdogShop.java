@@ -1,5 +1,7 @@
-public class UmbrellaShop extends Shop {
-    public UmbrellaShop() {
+package shops;
+
+public class HotdogShop extends Shop{
+    public HotdogShop() {
     }
 
     @Override

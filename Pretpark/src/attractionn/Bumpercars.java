@@ -1,3 +1,5 @@
+package attractionn;
+
 public class Bumpercars extends Attraction {
     public Bumpercars() {
     }
