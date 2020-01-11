@@ -1,14 +1,18 @@
 package shops;
 
+import exceptions.NegativeItemsSoldException;
 import identifiers.Identifiable;
 import utilities.Utility;
 
-public abstract class Shop implements Identifiable {
+public abstract class Shop implements Identifiable{
 
         private int totalDayItemsSold;
         private final String UNIQUE_SHOP_ID;
 
-    public Shop(int totalDayItemsSold) {
+    public Shop(int totalDayItemsSold) throws NegativeItemsSoldException{
+        if (totalDayItemsSold < 0 ){
+            throw new NegativeItemsSoldException();
+        }
         this.totalDayItemsSold = totalDayItemsSold;
         this.UNIQUE_SHOP_ID = Utility.generateUniqueID("S");
     }

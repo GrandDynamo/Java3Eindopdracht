@@ -1,4 +1,5 @@
-import attraction.Attraction;
+import attractions.Attraction;
+import exceptions.NegativeItemsSoldException;
 import shops.HotdogShop;
 import shops.MapShop;
 import shops.Shop;
@@ -19,17 +20,6 @@ public class ParkManagement {
         orderArrayList = new ArrayList<>();
         attractionArrayList = new ArrayList<>();
         shopArrayList = new ArrayList<>();
-
-        //####################################-Begin test gegevens-################################################################//
-        Shop hotdogShop = new HotdogShop(21);
-        Shop umbrellaShop = new UmbrellaShop(32);
-        Shop mapShop = new MapShop(50);
-        shopArrayList.add(hotdogShop);
-        shopArrayList.add(umbrellaShop);
-        shopArrayList.add(mapShop);
-
-        System.out.println(getTotalShopsDayRevenue());
-        //####################################-Einde test gegevens-################################################################//
     }
 
     public void addOrder(int orderId) {
@@ -39,11 +29,14 @@ public class ParkManagement {
     public void addAttraction(Attraction attraction){
         attractionArrayList.add(attraction);
     }
+    public void addShop(Shop shop){
+        shopArrayList.add(shop);
+    }
 
     private double calculateTotalShopsDayRevenue(){
         double totalShopsRevenue = 0;
         for (Shop shop : shopArrayList) {
-            System.out.println(shop.getUniqueShopID()); //TODO niet vergeten dit weg te halen in release 01.
+//            System.out.println(shop.getUniqueShopID()); //TODO niet vergeten dit weg te halen in release 01.
             totalShopsRevenue += shop.getDayRevenue();
         }
         return Utility.roundTwoDecimal(totalShopsRevenue);

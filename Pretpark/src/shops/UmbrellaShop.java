@@ -1,9 +1,11 @@
 package shops;
 
+import exceptions.NegativeItemsSoldException;
+
 public class UmbrellaShop extends Shop {
     private final double ITEM_PRICING = 12.45;
     private final String SOLD_ITEMS_NAME = "Umbrella";
-    public UmbrellaShop(int totalDayItemsSold) {
+    public UmbrellaShop(int totalDayItemsSold) throws NegativeItemsSoldException {
         super(totalDayItemsSold);
     }
 
