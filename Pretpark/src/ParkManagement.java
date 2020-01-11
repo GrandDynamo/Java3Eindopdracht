@@ -20,6 +20,7 @@ public class ParkManagement {
         attractionArrayList = new ArrayList<>();
         shopArrayList = new ArrayList<>();
 
+        //####################################-Begin test gegevens-################################################################//
         Shop hotdogShop = new HotdogShop(21);
         Shop umbrellaShop = new UmbrellaShop(32);
         Shop mapShop = new MapShop(50);
@@ -27,8 +28,8 @@ public class ParkManagement {
         shopArrayList.add(umbrellaShop);
         shopArrayList.add(mapShop);
 
-
         System.out.println(getTotalShopsDayRevenue());
+        //####################################-Einde test gegevens-################################################################//
     }
 
     public void addOrder(int orderId) {
