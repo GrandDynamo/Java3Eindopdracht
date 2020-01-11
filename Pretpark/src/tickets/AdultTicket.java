@@ -1,17 +1,19 @@
 package tickets;
 
 public class AdultTicket extends Ticket {
-    public AdultTicket(){
+    private final double TICKET_PRICE = 15.00;
 
+    public AdultTicket(){
+        super();
     }
 
     @Override
     public String getIdentifier() {
-        return null;
+        return "I am an adult ticket.";
     }
 
     @Override
     public double getTicketPrice() {
-        return 0;
+        return TICKET_PRICE;
     }
 }

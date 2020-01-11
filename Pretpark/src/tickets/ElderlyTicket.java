@@ -1,10 +1,10 @@
 package tickets;
 
 public class ElderlyTicket extends Ticket {
-    public static final double TICKET_PRICE = 25.00;
+    private final double TICKET_PRICE = 12.95;
 
     public ElderlyTicket() {
-
+        super();
     }
 
     @Override

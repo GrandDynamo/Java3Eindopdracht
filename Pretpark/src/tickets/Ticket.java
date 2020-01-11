@@ -1,15 +1,13 @@
 package tickets;
 
 import identifiers.Identifiable;
+import utilities.Utility;
 
-// TODO: FINISH TICKET CLASS AND IMPLEMENT CHILDS. ALSO USE SUPER?
 public abstract class Ticket implements Identifiable {
-    public int ticketId;
+    private final String UNIQUE_TICKET_ID;
 
     public Ticket() {
-        int randomInt = (int)(Math.random()*100);
-
-        this.ticketId = randomInt;
+        UNIQUE_TICKET_ID = Utility.generateUniqueID("S");
     }
 
     @Override

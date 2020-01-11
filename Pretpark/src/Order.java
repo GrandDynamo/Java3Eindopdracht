@@ -2,6 +2,7 @@ import tickets.AdultTicket;
 import tickets.ChildTicket;
 import tickets.ElderlyTicket;
 import tickets.Ticket;
+import utilities.Utility;
 
 import java.util.ArrayList;
 
@@ -10,15 +11,20 @@ public class Order {
 
     protected ArrayList<Ticket> ticketList;
     protected double orderPrice;
+    private final String UNIQUE_ORDER_ID;
 
     public Order() {
-        // TODO: Genereer random orderId
         this.orderId = 123;
         this.ticketList = new ArrayList<>();
+        this.UNIQUE_ORDER_ID = Utility.generateUniqueID("S");
     }
 
     public int getOrderId() {
         return orderId;
+    }
+
+    public double getOrderPrice() {
+        return orderPrice;
     }
 
     public void addTicket(int age) {
@@ -35,9 +41,5 @@ public class Order {
         for (Ticket ticket: ticketList) {
             this.orderPrice += ticket.getTicketPrice();
         }
-    }
-
-    public double getOrderPrice() {
-        return orderPrice;
     }
 }
