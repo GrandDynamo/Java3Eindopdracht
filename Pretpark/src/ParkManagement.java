@@ -43,7 +43,7 @@ public class ParkManagement {
     private double calculateTotalShopsDayRevenue(){
         double totalShopsRevenue = 0;
         for (Shop shop : shopArrayList) {
-            System.out.println(shop.getUniqueShopID());
+            System.out.println(shop.getUniqueShopID()); //TODO niet vergeten dit weg te halen in release 01.
             totalShopsRevenue += shop.getDayRevenue();
         }
         return Utility.roundTwoDecimal(totalShopsRevenue);
