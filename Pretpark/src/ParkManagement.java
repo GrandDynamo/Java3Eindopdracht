@@ -17,8 +17,8 @@ public class ParkManagement {
         orderList = new ArrayList<>();
         attractionList = new ArrayList<>();
 
-        Shop hotdogShop = new HotdogShop(12.33);
-        System.out.println(hotdogShop.getIdentifier());
+        Shop hotdogShop = new HotdogShop(21);
+        System.out.println(hotdogShop.getDayRevenue());
     }
 
     public void addOrder(int orderId) {
