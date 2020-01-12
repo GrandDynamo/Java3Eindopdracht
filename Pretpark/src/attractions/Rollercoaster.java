@@ -6,7 +6,7 @@ public class Rollercoaster extends Attraction {
     }
 
     @Override
-    public String getIdentifier() {
+    public String toString() {
         return "I am a rollercoaster attraction.";
     }
 }

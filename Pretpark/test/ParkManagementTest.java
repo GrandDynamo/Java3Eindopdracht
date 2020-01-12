@@ -15,10 +15,10 @@ class ParkManagementTest {
 
     @org.junit.jupiter.api.Test
     void getTotalShopsDayRevenue() throws NegativeItemsSoldException {
-        Shop umbrellaShop1 = new UmbrellaShop(9);
-        Shop mapShop1 = new MapShop(3);
-        Shop balloonShop1 = new BalloonShop(5);
-        Shop hotdogShop1 = new HotdogShop(12);
+        Shop umbrellaShop1 = new UmbrellaShop(9, 1);
+        Shop mapShop1 = new MapShop(3, 1);
+        Shop balloonShop1 = new BalloonShop(5, 1);
+        Shop hotdogShop1 = new HotdogShop(12, 1);
 
         this.parkManagement.addShop(umbrellaShop1);
         this.parkManagement.addShop(mapShop1);

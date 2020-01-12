@@ -9,7 +9,7 @@ public abstract class Attraction implements Identifiable {
     private int maxPeopleInRide;
 
     @Override
-    public abstract String getIdentifier();
+    public abstract String toString();
 
     public Attraction(int minutesBetweenRide, int maxPeopleInRide) {
         this.minutesBetweenRide = minutesBetweenRide;

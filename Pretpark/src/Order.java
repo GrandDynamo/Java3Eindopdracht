@@ -7,39 +7,56 @@ import utilities.Utility;
 import java.util.ArrayList;
 
 public class Order {
-    public int orderId;
 
     protected ArrayList<Ticket> ticketList;
-    protected double orderPrice;
     private final String UNIQUE_ORDER_ID;
 
-    public Order() {
-        this.orderId = 123;
+
+    public Order(int amountChildTickets, int amountElderlyTickets, int amountAdultTickets) {
         this.ticketList = new ArrayList<>();
-        this.UNIQUE_ORDER_ID = Utility.generateUniqueID("T");
+        this.UNIQUE_ORDER_ID = Utility.generateUniqueID("ORDER");
+
+        addElderlyTickets(amountElderlyTickets);
+        addAdultTickets(amountAdultTickets);
+        addChildTickets(amountChildTickets);
     }
 
-    public int getOrderId() {
-        return orderId;
+    public String getOrderId() {
+        return UNIQUE_ORDER_ID;
+    }
+
+    public void addElderlyTickets(int amountElderlyTickets) {
+        for (int i =0; i < amountElderlyTickets; i++){
+            ticketList.add(new ElderlyTicket(i));
+        }
+    }
+
+    public void addChildTickets(int amountChildTickets) {
+        for (int i =0; i < amountChildTickets; i++){
+            ticketList.add(new ChildTicket(i));
+        }
+    }
+
+    public void addAdultTickets(int amountAdultTickets) {
+        for (int i =0; i < amountAdultTickets; i++){
+            ticketList.add(new AdultTicket(i));
+        }
     }
 
     public double getOrderPrice() {
+        double orderPrice = 0;
+        for (Ticket ticket : ticketList) {
+            orderPrice += ticket.getTicketPrice();
+            System.out.println(ticket + " : " + ticket.getTicketPrice());
+        }
         return orderPrice;
     }
-
-    public void addTicket(int age) {
-        if(age < 5) {
-            this.ticketList.add(new ChildTicket());
-        } else if(age > 5 && age < 65) {
-            this.ticketList.add(new AdultTicket());
-        } else {
-            this.ticketList.add(new ElderlyTicket());
-        }
-    }
-
-    public void setOrderPrice() {
+    public Ticket getTicket(String ticketID){
         for (Ticket ticket: ticketList) {
-            this.orderPrice += ticket.getTicketPrice();
+            if (ticket.equals(ticketID)){
+                return ticket;
+            }
         }
+        return null;
     }
 }

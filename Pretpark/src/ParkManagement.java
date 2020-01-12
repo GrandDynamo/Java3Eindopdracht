@@ -19,18 +19,19 @@ public class ParkManagement {
         shopArrayList = new ArrayList<>();
     }
 
-    public void addOrder(int orderId) {
-        orderArrayList.add(new Order());
+    public void addOrder(Order order) {
+        orderArrayList.add(order);
     }
 
-    public void addAttraction(Attraction attraction){
+    public void addAttraction(Attraction attraction) {
         attractionArrayList.add(attraction);
     }
-    public void addShop(Shop shop){
+
+    public void addShop(Shop shop) {
         shopArrayList.add(shop);
     }
 
-    private double calculateTotalShopsDayRevenue(){
+    private double calculateTotalShopsDayRevenue() {
         double totalShopsRevenue = 0;
         for (Shop shop : shopArrayList) {
 //            System.out.println(shop.getUniqueShopID()); //TODO niet vergeten dit weg te halen in release 01.
@@ -39,7 +40,7 @@ public class ParkManagement {
         return Utility.roundTwoDecimal(totalShopsRevenue);
     }
 
-    public double getTotalShopsDayRevenue(){
+    public double getTotalShopsDayRevenue() {
         return calculateTotalShopsDayRevenue();
     }
 }

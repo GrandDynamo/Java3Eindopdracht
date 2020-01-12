@@ -1,21 +1,23 @@
 import exceptions.NegativeItemsSoldException;
 import shops.*;
+import tickets.ChildTicket;
+import tickets.Ticket;
 
 public class ThemePark {
 
     public static void main(String[] args) throws NegativeItemsSoldException {
         // write your code here
         ParkManagement parkManagement = new ParkManagement();
+        parkManagement.addShop(new UmbrellaShop(9, 1));
+        parkManagement.addShop(new UmbrellaShop(5, 2));
+        parkManagement.addShop(new MapShop(3, 1));
+        parkManagement.addShop(new BalloonShop(5, 1));
+        parkManagement.addShop(new HotdogShop(12, 1));
+//        System.out.println(parkManagement.getTotalShopsDayRevenue());
+        Order order1 = new Order(12,32,23);
+        parkManagement.addOrder(order1);
+        order1.getOrderPrice();
 
-        Shop umbrellaShop1 = new UmbrellaShop(9);
-        Shop mapShop1 = new MapShop(3);
-        Shop balloonShop1 = new BalloonShop(5);
-        Shop hotdogShop1 = new HotdogShop(12);
-
-        parkManagement.addShop(umbrellaShop1);
-        parkManagement.addShop(mapShop1);
-        parkManagement.addShop(balloonShop1);
-        parkManagement.addShop(hotdogShop1);
 
         System.out.println(parkManagement.getTotalShopsDayRevenue());
     }

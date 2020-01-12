@@ -6,7 +6,7 @@ public class FreeFall extends Attraction {
     }
 
     @Override
-    public  String getIdentifier() {
+    public  String toString() {
         return "I am a freeFall attraction.";
     }
 }

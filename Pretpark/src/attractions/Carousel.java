@@ -6,7 +6,7 @@ public class Carousel extends Attraction {
     }
 
     @Override
-    public String getIdentifier() {
+    public String toString() {
         return "I am a carousel attraction.";
     }
 }

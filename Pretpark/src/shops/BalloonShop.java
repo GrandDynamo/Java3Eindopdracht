@@ -6,14 +6,17 @@ public class BalloonShop extends Shop {
 
     private final double ITEM_PRICING = 3.35;
     private final String SOLD_ITEMS_NAME = "Balloon";
+    private final String uniqueIDString;
 
-    public BalloonShop(int totalDayItemsSold) throws NegativeItemsSoldException {
-        super(totalDayItemsSold);
+
+    public BalloonShop(int totalDayItemsSold, int uniqueIDInt) throws NegativeItemsSoldException {
+        super(totalDayItemsSold, uniqueIDInt);
+        this.uniqueIDString = getClass().getSimpleName() + uniqueIDInt;
     }
 
     @Override
-    public String getIdentifier() {
-        return "I sell baloons.";
+    public String toString() {
+        return this.uniqueIDString;
     }
 
     @Override

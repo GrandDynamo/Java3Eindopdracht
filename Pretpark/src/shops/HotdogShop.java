@@ -5,13 +5,16 @@ import exceptions.NegativeItemsSoldException;
 public class HotdogShop extends Shop{
     private final double ITEM_PRICING = 4.20;
     private final String SOLD_ITEMS_NAME = "Hot Dog";
-    public HotdogShop(int totalDayItemsSold) throws NegativeItemsSoldException {
-        super(totalDayItemsSold);
+    private final String uniqueIDString;
+
+    public HotdogShop(int totalDayItemsSold, int uniqueIDInt) throws NegativeItemsSoldException {
+        super(totalDayItemsSold, uniqueIDInt);
+        this.uniqueIDString = getClass().getSimpleName() + uniqueIDInt;
     }
 
     @Override
-    public String getIdentifier() {
-        return "I sell hotdogs.";
+    public String toString() {
+        return this.uniqueIDString;
     }
 
     @Override

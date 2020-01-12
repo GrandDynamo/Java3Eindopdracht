@@ -1,15 +1,14 @@
 package tickets;
 
+import utilities.Utility;
+
 public class ChildTicket extends Ticket {
-    private final double TICKET_PRICE = 9.50;
+    private final double TICKET_PRICE = 15.00;
+    private final String uniqueIDString;
 
-    public ChildTicket() {
+    public ChildTicket(int uniqueIDInt){
         super();
-    }
-
-    @Override
-    public String getIdentifier() {
-        return "I am a child ticket";
+        this.uniqueIDString = getClass().getSimpleName() + uniqueIDInt;
     }
 
     @Override
@@ -17,4 +16,8 @@ public class ChildTicket extends Ticket {
         return TICKET_PRICE;
     }
 
+    @Override
+    public String toString() {
+        return uniqueIDString;
+    }
 }

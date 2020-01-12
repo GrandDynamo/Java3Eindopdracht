@@ -9,7 +9,7 @@ public abstract class Shop implements Identifiable{
         private int totalDayItemsSold;
         private final String UNIQUE_SHOP_ID;
 
-    public Shop(int totalDayItemsSold) throws NegativeItemsSoldException{
+    public Shop(int totalDayItemsSold, int uniqueIDInt) throws NegativeItemsSoldException{
         if (totalDayItemsSold < 0 ){
             throw new NegativeItemsSoldException();
         }
@@ -18,7 +18,7 @@ public abstract class Shop implements Identifiable{
     }
 
     @Override
-    public abstract String getIdentifier();
+    public abstract String toString();
 
     public abstract double getITEM_PRICING();
 
@@ -26,8 +26,5 @@ public abstract class Shop implements Identifiable{
 
     public double getDayRevenue(){
         return getITEM_PRICING() * totalDayItemsSold;
-    }
-    public String getUniqueShopID(){
-        return UNIQUE_SHOP_ID;
     }
 }
