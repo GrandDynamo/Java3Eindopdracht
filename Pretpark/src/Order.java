@@ -16,7 +16,7 @@ public class Order {
     public Order() {
         this.orderId = 123;
         this.ticketList = new ArrayList<>();
-        this.UNIQUE_ORDER_ID = Utility.generateUniqueID("S");
+        this.UNIQUE_ORDER_ID = Utility.generateUniqueID("T");
     }
 
     public int getOrderId() {

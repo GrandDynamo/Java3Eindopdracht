@@ -1,9 +1,6 @@
 import attractions.Attraction;
 import exceptions.NegativeItemsSoldException;
-import shops.HotdogShop;
-import shops.MapShop;
-import shops.Shop;
-import shops.UmbrellaShop;
+import shops.*;
 import utilities.Utility;
 
 import java.util.ArrayList;
@@ -16,7 +13,7 @@ public class ParkManagement {
     private int totalDayVisitors;
     private int totalDayElderlyVisitors;
 
-    public ParkManagement() {
+    public ParkManagement() throws NegativeItemsSoldException {
         orderArrayList = new ArrayList<>();
         attractionArrayList = new ArrayList<>();
         shopArrayList = new ArrayList<>();

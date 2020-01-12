@@ -9,7 +9,7 @@ class ParkManagementTest {
     public ParkManagement parkManagement;
 
     @BeforeEach
-    void beforeEach(){
+    void beforeEach() throws NegativeItemsSoldException {
         parkManagement = new ParkManagement();
     }
 
