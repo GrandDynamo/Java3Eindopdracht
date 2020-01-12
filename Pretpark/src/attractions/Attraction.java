@@ -29,10 +29,14 @@ public abstract class Attraction implements Stringable {
         return calculateMaxVisitors();
     }
 
+    public int getTotalDayVisitors() {
+        return totalDayVisitors;
+    }
+
     @Override
     public abstract String toString();
 
     public void printDifferenceBetweenMaxAndTotalVisitors(){
-        System.out.println("Visitors: " + this.totalDayVisitors + " / " + calculateMaxVisitors());
+        System.out.println("Visitors: " + getTotalDayVisitors() + " / " + calculateMaxVisitors());
     }
 }

@@ -64,4 +64,23 @@ public class ParkManagement {
             attraction.printDifferenceBetweenMaxAndTotalVisitors();
         }
     }
+    public void printBussiestAttraction(){
+        Attraction bussiestAttraction;
+        int totalAttractionVisitors = 0;
+        for(Attraction attraction : attractionArrayList) {
+            if(attraction.getTotalDayVisitors() > totalAttractionVisitors) {
+                bussiestAttraction = attraction;
+            }
+        }
+    }
+
+    public void printWorstShop() {
+        Shop worstShop;
+        double totalShopRevenue = shopArrayList.get(0).getDayRevenue();
+        for(Shop shop : shopArrayList) {
+            if(shop.getDayRevenue() < totalShopRevenue) {
+                worstShop = shop;
+            }
+        }
+    }
 }
