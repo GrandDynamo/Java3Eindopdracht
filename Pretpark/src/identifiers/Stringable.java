@@ -1,6 +1,6 @@
 package identifiers;
 
-public interface Identifiable {
+public interface Stringable {
     /**
      * Get an object's identifier.
      * @return The information of an object.

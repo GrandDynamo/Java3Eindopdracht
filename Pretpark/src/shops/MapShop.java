@@ -6,16 +6,14 @@ public class MapShop extends Shop {
 
     private final double ITEM_PRICING = 1.22;
     private final String SOLD_ITEMS_NAME = "Map";
-    private final String uniqueIDString;
 
-    public MapShop(int totalDayItemsSold, int uniqueIDInt) throws NegativeItemsSoldException {
-        super(totalDayItemsSold, uniqueIDInt);
-        this.uniqueIDString = getClass().getSimpleName() + uniqueIDInt;
+    public MapShop(int totalDayItemsSold) throws NegativeItemsSoldException {
+        super(totalDayItemsSold);
     }
 
     @Override
     public String toString() {
-        return this.uniqueIDString;
+        return "I sell maps.";
     }
 
     @Override

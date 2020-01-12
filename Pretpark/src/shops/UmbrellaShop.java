@@ -5,15 +5,13 @@ import exceptions.NegativeItemsSoldException;
 public class UmbrellaShop extends Shop {
     private final double ITEM_PRICING = 12.45;
     private final String SOLD_ITEMS_NAME = "Umbrella";
-    private final String uniqueIDString;
-    public UmbrellaShop(int totalDayItemsSold, int uniqueIDInt) throws NegativeItemsSoldException {
-        super(totalDayItemsSold, uniqueIDInt);
-        this.uniqueIDString = getClass().getSimpleName() + uniqueIDInt;
+    public UmbrellaShop(int totalDayItemsSold) throws NegativeItemsSoldException {
+        super(totalDayItemsSold);
     }
 
     @Override
     public String toString() {
-        return this.uniqueIDString;
+        return "I sell umbrellas.";
     }
 
     @Override

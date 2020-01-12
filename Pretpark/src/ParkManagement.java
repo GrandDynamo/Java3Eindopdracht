@@ -34,13 +34,34 @@ public class ParkManagement {
     private double calculateTotalShopsDayRevenue() {
         double totalShopsRevenue = 0;
         for (Shop shop : shopArrayList) {
-//            System.out.println(shop.getUniqueShopID()); //TODO niet vergeten dit weg te halen in release 01.
             totalShopsRevenue += shop.getDayRevenue();
         }
         return Utility.roundTwoDecimal(totalShopsRevenue);
     }
 
+    private double calculateTotalOrderRevenue(){
+        double totalOrderRevenue = 0;
+        for(Order order : orderArrayList){
+            totalOrderRevenue += order.getOrderPrice();
+        }
+        return Utility.roundTwoDecimal(totalOrderRevenue);
+    }
+
     public double getTotalShopsDayRevenue() {
         return calculateTotalShopsDayRevenue();
+    }
+    public double getTotalRevenue(){
+        return calculateTotalOrderRevenue() + calculateTotalOrderRevenue();
+    }
+
+    public void printMaxVisitorsEachAttraction() {
+        for (Attraction attraction : attractionArrayList) {
+            System.out.println(attraction.getMaxVisitors());
+        }
+    }
+    public void printVisitorInformationAttractions(){
+        for (Attraction attraction : attractionArrayList) {
+            attraction.printDifferenceBetweenMaxAndTotalVisitors();
+        }
     }
 }

@@ -1,9 +1,8 @@
 package tickets;
 
-import identifiers.Identifiable;
-import utilities.Utility;
+import identifiers.Stringable;
 
-public abstract class Ticket implements Identifiable {
+public abstract class Ticket implements Stringable {
 
     public Ticket() {
     }

@@ -1,28 +1,28 @@
+import identifiers.Stringable;
 import tickets.AdultTicket;
 import tickets.ChildTicket;
 import tickets.ElderlyTicket;
 import tickets.Ticket;
 import utilities.Utility;
 
+import javax.management.monitor.StringMonitorMBean;
 import java.util.ArrayList;
 
-public class Order {
+public class Order implements Stringable {
 
     protected ArrayList<Ticket> ticketList;
-    private final String UNIQUE_ORDER_ID;
 
 
-    public Order(int amountChildTickets, int amountElderlyTickets, int amountAdultTickets) {
+    public Order(int amountChildTickets, int amountElderlyTickets, int amountAdultTickets){
         this.ticketList = new ArrayList<>();
-        this.UNIQUE_ORDER_ID = Utility.generateUniqueID("ORDER");
 
         addElderlyTickets(amountElderlyTickets);
         addAdultTickets(amountAdultTickets);
         addChildTickets(amountChildTickets);
     }
 
-    public String getOrderId() {
-        return UNIQUE_ORDER_ID;
+    public String toString() {
+        return getClass().getSimpleName();
     }
 
     public void addElderlyTickets(int amountElderlyTickets) {
@@ -47,16 +47,7 @@ public class Order {
         double orderPrice = 0;
         for (Ticket ticket : ticketList) {
             orderPrice += ticket.getTicketPrice();
-            System.out.println(ticket + " : " + ticket.getTicketPrice());
         }
         return orderPrice;
-    }
-    public Ticket getTicket(String ticketID){
-        for (Ticket ticket: ticketList) {
-            if (ticket.equals(ticketID)){
-                return ticket;
-            }
-        }
-        return null;
     }
 }
