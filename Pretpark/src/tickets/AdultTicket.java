@@ -1,13 +1,16 @@
 package tickets;
 
-import utilities.Utility;
+import exceptions.NegativeIDException;
 
 public class AdultTicket extends Ticket {
     private final double TICKET_PRICE = 15.00;
-    private String uniqueIDString;
+    private final String uniqueIDString;
 
-    public AdultTicket(int uniqueIDInt) {
+    public AdultTicket(int uniqueIDInt)throws NegativeIDException {
         super();
+        if (uniqueIDInt < 0){
+            throw new NegativeIDException();
+        }
         this.uniqueIDString = getClass().getSimpleName() + uniqueIDInt;
     }
 

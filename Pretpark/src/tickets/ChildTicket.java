@@ -1,7 +1,5 @@
 package tickets;
 
-import utilities.Utility;
-
 public class ChildTicket extends Ticket {
     private final double TICKET_PRICE = 15.00;
     private final String uniqueIDString;
