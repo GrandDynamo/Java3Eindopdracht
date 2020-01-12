@@ -1,5 +1,5 @@
 import attractions.Attraction;
-import exceptions.NegativeItemsSoldException;
+import exceptions.NegativeSoldException;
 import shops.*;
 import utilities.Utility;
 
@@ -13,7 +13,7 @@ public class ParkManagement {
     private int totalDayVisitors;
     private int totalDayElderlyVisitors;
 
-    public ParkManagement() throws NegativeItemsSoldException {
+    public ParkManagement() throws NegativeSoldException {
         orderArrayList = new ArrayList<>();
         attractionArrayList = new ArrayList<>();
         shopArrayList = new ArrayList<>();

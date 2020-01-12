@@ -1,3 +1,4 @@
+import exceptions.NegativeIDException;
 import identifiers.Stringable;
 import tickets.AdultTicket;
 import tickets.ChildTicket;
@@ -13,7 +14,7 @@ public class Order implements Stringable {
     protected ArrayList<Ticket> ticketList;
 
 
-    public Order(int amountChildTickets, int amountElderlyTickets, int amountAdultTickets){
+    public Order(int amountChildTickets, int amountElderlyTickets, int amountAdultTickets) throws NegativeIDException {
         this.ticketList = new ArrayList<>();
 
         addElderlyTickets(amountElderlyTickets);
@@ -37,7 +38,7 @@ public class Order implements Stringable {
         }
     }
 
-    public void addAdultTickets(int amountAdultTickets) {
+    public void addAdultTickets(int amountAdultTickets) throws NegativeIDException {
         for (int i =0; i < amountAdultTickets; i++){
             ticketList.add(new AdultTicket(i));
         }

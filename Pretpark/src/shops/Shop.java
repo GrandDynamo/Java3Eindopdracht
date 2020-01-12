@@ -1,15 +1,15 @@
 package shops;
 
-import exceptions.NegativeItemsSoldException;
+import exceptions.NegativeSoldException;
 import identifiers.Stringable;
 
 public abstract class Shop implements Stringable {
 
         private int totalDayItemsSold;
 
-    public Shop(int totalDayItemsSold) throws NegativeItemsSoldException{
+    public Shop(int totalDayItemsSold) throws NegativeSoldException {
         if (totalDayItemsSold < 0 ){
-            throw new NegativeItemsSoldException();
+            throw new NegativeSoldException();
         }
         this.totalDayItemsSold = totalDayItemsSold;
     }

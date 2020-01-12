@@ -1,13 +1,13 @@
 package shops;
 
-import exceptions.NegativeItemsSoldException;
+import exceptions.NegativeSoldException;
 
 public class MapShop extends Shop {
 
     private final double ITEM_PRICING = 1.22;
     private final String SOLD_ITEMS_NAME = "Map";
 
-    public MapShop(int totalDayItemsSold) throws NegativeItemsSoldException {
+    public MapShop(int totalDayItemsSold) throws NegativeSoldException {
         super(totalDayItemsSold);
     }
 

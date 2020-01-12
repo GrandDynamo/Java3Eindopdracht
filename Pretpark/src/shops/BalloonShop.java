@@ -1,6 +1,6 @@
 package shops;
 
-import exceptions.NegativeItemsSoldException;
+import exceptions.NegativeSoldException;
 
 public class BalloonShop extends Shop {
 
@@ -8,7 +8,7 @@ public class BalloonShop extends Shop {
     private final String SOLD_ITEMS_NAME = "Balloon";
 
 
-    public BalloonShop(int totalDayItemsSold) throws NegativeItemsSoldException {
+    public BalloonShop(int totalDayItemsSold) throws NegativeSoldException {
         super(totalDayItemsSold);
     }
 

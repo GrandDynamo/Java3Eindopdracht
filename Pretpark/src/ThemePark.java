@@ -1,15 +1,12 @@
 import attractions.*;
-import exceptions.NegativeItemsSoldException;
+import exceptions.NegativeIDException;
+import exceptions.NegativeSoldException;
 import exceptions.ToManyVisitorsException;
-import org.w3c.dom.Attr;
-import org.w3c.dom.html.HTMLObjectElement;
 import shops.*;
-import tickets.ChildTicket;
-import tickets.Ticket;
 
 public class ThemePark {
 
-    public static void main(String[] args) throws NegativeItemsSoldException, ToManyVisitorsException {
+    public static void main(String[] args) throws NegativeSoldException, ToManyVisitorsException, NegativeIDException {
         // write your code here
         ParkManagement parkManagement = new ParkManagement();
         Shop umbrellaShop1 = new UmbrellaShop(3);

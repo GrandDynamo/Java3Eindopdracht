@@ -1,4 +1,4 @@
-import exceptions.NegativeItemsSoldException;
+import exceptions.NegativeSoldException;
 import org.junit.jupiter.api.BeforeEach;
 import shops.*;
 
@@ -9,12 +9,12 @@ class ParkManagementTest {
     public ParkManagement parkManagement;
 
     @BeforeEach
-    void beforeEach() throws NegativeItemsSoldException {
+    void beforeEach() throws NegativeSoldException {
         parkManagement = new ParkManagement();
     }
 
     @org.junit.jupiter.api.Test
-    void getTotalShopsDayRevenue() throws NegativeItemsSoldException {
+    void getTotalShopsDayRevenue() throws NegativeSoldException {
         Shop umbrellaShop1 = new UmbrellaShop(9);
         Shop mapShop1 = new MapShop(3);
         Shop balloonShop1 = new BalloonShop(5);

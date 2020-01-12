@@ -1,12 +1,12 @@
 package shops;
 
-import exceptions.NegativeItemsSoldException;
+import exceptions.NegativeSoldException;
 
 public class HotdogShop extends Shop{
     private final double ITEM_PRICING = 4.20;
     private final String SOLD_ITEMS_NAME = "Hot Dog";
 
-    public HotdogShop(int totalDayItemsSold) throws NegativeItemsSoldException {
+    public HotdogShop(int totalDayItemsSold) throws NegativeSoldException {
         super(totalDayItemsSold);
     }
 
