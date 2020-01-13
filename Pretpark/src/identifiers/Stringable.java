@@ -6,4 +6,6 @@ public interface Stringable {
      * @return The information of an object.
      */
     String toString();
+
+
 }

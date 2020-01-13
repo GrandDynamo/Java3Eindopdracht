@@ -13,7 +13,7 @@ public class ParkManagement {
     private int totalDayVisitors;
     private int totalDayElderlyVisitors;
 
-    public ParkManagement() throws NegativeSoldException {
+    public ParkManagement() {
         orderArrayList = new ArrayList<>();
         attractionArrayList = new ArrayList<>();
         shopArrayList = new ArrayList<>();
