@@ -1,7 +1,7 @@
 package tickets;
 
 public class ChildTicket extends Ticket {
-    private final double TICKET_PRICE = 15.00;
+    private final double TICKET_PRICE = 8.00;
     private final String uniqueIDString;
 
     public ChildTicket(int uniqueIDInt){

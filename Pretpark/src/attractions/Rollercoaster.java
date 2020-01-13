@@ -1,7 +1,9 @@
 package attractions;
 
+import exceptions.NegativeNumberException;
+
 public class Rollercoaster extends Attraction {
-    public Rollercoaster(int minutesBetweenRide, int maxPeopleInRide) {
+    public Rollercoaster(int minutesBetweenRide, int maxPeopleInRide) throws NegativeNumberException {
         super(minutesBetweenRide, maxPeopleInRide);
     }
 

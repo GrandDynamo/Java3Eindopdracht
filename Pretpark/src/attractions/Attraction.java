@@ -1,5 +1,6 @@
 package attractions;
 
+import exceptions.NegativeNumberException;
 import exceptions.ToManyVisitorsException;
 import identifiers.Stringable;
 
@@ -9,7 +10,10 @@ public abstract class Attraction implements Stringable {
     private final int  MINUTES_BETWEEN_RIDE;
     private final int MAX_PEOPLE_IN_RIDE;
 
-    public Attraction(int minutesBetweenRide, int maxPeopleInRide) {
+    public Attraction(int minutesBetweenRide, int maxPeopleInRide) throws NegativeNumberException {
+        if(minutesBetweenRide < 0 || maxPeopleInRide < 0){
+            throw new NegativeNumberException();
+        }
         this.MINUTES_BETWEEN_RIDE = minutesBetweenRide;
         this.MAX_PEOPLE_IN_RIDE = maxPeopleInRide;
     }

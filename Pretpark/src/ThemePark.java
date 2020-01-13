@@ -1,12 +1,12 @@
 import attractions.*;
-import exceptions.NegativeIDException;
+import exceptions.NegativeNumberException;
 import exceptions.NegativeSoldException;
 import exceptions.ToManyVisitorsException;
 import shops.*;
 
 public class ThemePark {
 
-    public static void main(String[] args) throws NegativeSoldException, ToManyVisitorsException, NegativeIDException {
+    public static void main(String[] args) throws NegativeSoldException, ToManyVisitorsException, NegativeNumberException {
         // write your code here
         ParkManagement parkManagement = new ParkManagement();
         Shop umbrellaShop1 = new UmbrellaShop(3);
