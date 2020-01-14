@@ -27,19 +27,19 @@ public class Order implements Stringable {
         return getClass().getSimpleName();
     }
 
-    public void addElderlyTickets(int amountElderlyTickets) {
+    private void addElderlyTickets(int amountElderlyTickets) {
         for (int i = 0; i < amountElderlyTickets; i++) {
             ticketList.add(new ElderlyTicket(i));
         }
     }
 
-    public void addChildTickets(int amountChildTickets) {
+    private void addChildTickets(int amountChildTickets) {
         for (int i = 0; i < amountChildTickets; i++) {
             ticketList.add(new ChildTicket(i));
         }
     }
 
-    public void addAdultTickets(int amountAdultTickets) throws NegativeNumberException {
+    private void addAdultTickets(int amountAdultTickets) {
         for (int i = 0; i < amountAdultTickets; i++) {
             ticketList.add(new AdultTicket(i));
         }

@@ -12,10 +12,4 @@ class AdultTicketTest {
         Ticket adultTicket1 = new AdultTicket(12);
         assertEquals(15.00, adultTicket1.getTicketPrice());
     }
-    @Test
-    void getTicketPrice_Should_be_Exception(){
-        assertThrows(NegativeNumberException.class, () -> {
-                Ticket adultTicket1 = new AdultTicket(-12);
-        });
-    }
 }
