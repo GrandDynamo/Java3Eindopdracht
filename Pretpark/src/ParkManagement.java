@@ -67,14 +67,7 @@ public class ParkManagement {
         }
         return Utility.roundTwoDecimal(totalOrderRevenue);
     }
-
-    public void printMaxVisitorsEachAttraction() {
-        for (Attraction attraction : attractionArrayList) {
-            System.out.println(attraction.getMaxVisitors());
-        }
-    }
-
-
+    
     /**
      * Calculates the attracties that had the most amount of visitors.
      *
