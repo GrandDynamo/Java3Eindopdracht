@@ -8,11 +8,6 @@ public class ParkManagement {
     private ArrayList<Order> orderArrayList;
     private ArrayList<Attraction> attractionArrayList;
     private ArrayList<Shop> shopArrayList;
-    //    private Attraction bussiestAttraction;
-//    private Shop worstShop;
-    private double dayRevenue;
-    private int totalDayVisitors;
-    private int totalDayElderlyVisitors;
 
     public ParkManagement() {
         orderArrayList = new ArrayList<>();
@@ -20,18 +15,38 @@ public class ParkManagement {
         shopArrayList = new ArrayList<>();
     }
 
+    /**
+     * Adds an order to the orderArrayList.
+     *
+     * @param order
+     */
     public void addOrder(Order order) {
         orderArrayList.add(order);
     }
 
+    /**
+     * Adds an attraction to the attractionArrayList.
+     *
+     * @param attraction
+     */
     public void addAttraction(Attraction attraction) {
         attractionArrayList.add(attraction);
     }
 
+    /**
+     * Adds a shop to the shopArrayList.
+     *
+     * @param shop
+     */
     public void addShop(Shop shop) {
         shopArrayList.add(shop);
     }
 
+    /**
+     * Calculates the rounded total shop revenues combined.
+     *
+     * @return totalShopsRevenue
+     */
     private double calculateTotalShopsDayRevenue() {
         double totalShopsRevenue = 0;
         for (Shop shop : shopArrayList) {
@@ -40,6 +55,11 @@ public class ParkManagement {
         return Utility.roundTwoDecimal(totalShopsRevenue);
     }
 
+    /**
+     * Calculates the rounded total revenue of the park from orders.
+     *
+     * @return totalOrderRevenue
+     */
     private double calculateTotalOrderRevenue() {
         double totalOrderRevenue = 0;
         for (Order order : orderArrayList) {
@@ -54,30 +74,35 @@ public class ParkManagement {
         }
     }
 
-    public void printVisitorInformationAttractions() {
-        for (Attraction attraction : attractionArrayList) {
-            attraction.printDifferenceBetweenMaxAndTotalVisitors();
-        }
-    }
 
+    /**
+     * Calculates the attracties that had the most amount of visitors.
+     *
+     * @return bussiestAttraction
+     */
     private Attraction calculateBussiestAttraction() {
         Attraction bussiestAttraction = null;
         int totalAttractionVisitors = 0;
-        try{
+        try {
             for (Attraction attraction : attractionArrayList) {
                 if (attraction.getTotalDayVisitors() > totalAttractionVisitors) {
                     bussiestAttraction = attraction;
                 }
             }
-        }catch(Exception exc){
+        } catch (Exception exc) {
             System.out.println("Exception inside calculateBussiestAttraction: " + exc);
         }
         return bussiestAttraction;
     }
 
-    private Shop calculateWorstShop(){
+    /**
+     * Calculates the shop who has the least amount of revenue.
+     *
+     * @return worstShop
+     */
+    private Shop calculateWorstShop() {
         Shop worstShop = null;
-        try{
+        try {
             double totalShopRevenue = shopArrayList.get(0).getDayRevenue();
             for (Shop shop : shopArrayList) {
                 if (shop.getDayRevenue() < totalShopRevenue) {
@@ -85,11 +110,19 @@ public class ParkManagement {
                 }
             }
 
-        }
-        catch(Exception exc){
+        } catch (Exception exc) {
             System.out.println("Exception inside calculateWorstShop: " + exc);
         }
         return worstShop;
+    }
+
+    /**
+     * Prints the real visitor count and max visitor count of each attraction.
+     */
+    public void printVisitorInformationAttractions() {
+        for (Attraction attraction : attractionArrayList) {
+            attraction.printDifferenceBetweenMaxAndTotalVisitors();
+        }
     }
 
     public double getTotalShopsDayRevenue() {
