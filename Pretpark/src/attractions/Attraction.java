@@ -18,7 +18,7 @@ public abstract class Attraction implements Stringable {
         this.MAX_PEOPLE_IN_RIDE = maxPeopleInRide;
     }
 
-    public void setTotalDayVisitors(int totalDayVisitors)throws ToManyVisitorsException {
+    public void setTotalDayVisitors(int totalDayVisitors) throws ToManyVisitorsException {
         if (totalDayVisitors > calculateMaxVisitors()){
             throw new ToManyVisitorsException();
         }
