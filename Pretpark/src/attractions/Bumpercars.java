@@ -9,6 +9,10 @@ public class Bumpercars extends Attraction {
         super(minutesBetweenRide, maxPeopleInRide);
     }
 
+    /**
+     * Method to return the type of object.
+     * @return String type of object
+     */
     @Override
     public String toString() {
         return "I am a bumpercar attraction.";
